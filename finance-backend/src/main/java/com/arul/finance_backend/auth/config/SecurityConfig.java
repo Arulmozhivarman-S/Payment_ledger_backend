@@ -51,6 +51,9 @@ public class SecurityConfig {
                 config.setAllowCredentials(true);
                 return config;
             }))
+            .sessionManagement(session -> session
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+            
             // 2. Disable CSRF since we use stateless JWT tokens
             .csrf(csrf -> csrf.disable())
             // 3. Ensure preflight OPTIONS requests are completely public
