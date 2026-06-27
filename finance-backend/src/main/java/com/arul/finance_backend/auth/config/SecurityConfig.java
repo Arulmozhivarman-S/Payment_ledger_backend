@@ -1,6 +1,9 @@
 package com.arul.finance_backend.auth.config;
 
 import com.arul.finance_backend.auth.jwt.JwtAuthenticationFilter;
+
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
